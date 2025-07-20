@@ -1,0 +1,75 @@
+Advanced EDA Insights Report
+===========================
+
+This report summarizes key insights and analytics from the advanced EDA for both the Instacart and M5 Walmart datasets, with recommendations for modeling strategy.
+
+------------------------------------------------------------
+
+Instacart Dataset
+-----------------
+
+1. **Order Patterns**
+   - Most users place a moderate number of orders, but there is a long tail of highly active users. This suggests user activity level is an important feature.
+   - Orders are more frequent on weekends and during late morning to evening hours, indicating strong temporal patterns. Time-based features (day of week, hour) should be included in models.
+   - The distribution of days since prior order is right-skewed, with most orders placed within a week of the previous one. Recency is likely predictive of reorder probability.
+
+2. **Product & Basket Analysis**
+   - A small subset of products dominates order frequency, showing a "bestseller" effect. Product popularity is highly imbalanced.
+   - Basket sizes are typically small to medium, but some users place very large orders. Modeling basket size as a feature may help segment user types.
+   - Some products have extremely high reorder rates, indicating strong product loyalty. Reorder ratio per product is a valuable feature.
+
+3. **Customer Segmentation**
+   - User reorder ratios vary widely, suggesting the presence of distinct customer segments (e.g., loyal vs. occasional shoppers). Segmenting users may improve personalization.
+
+4. **Time Series Trends**
+   - Order volume is relatively stable but shows periodic spikes, likely due to promotions or seasonality. Time series models or lag features may capture these effects.
+
+5. **Feature Distributions**
+   - Engineered features like total orders per user and average days between orders show clear separation between user types. These features are likely to be predictive.
+
+**Modeling Implications:**
+- Include time-based, user-based, and product-based features.
+- Consider user segmentation and product popularity as categorical or numeric features.
+- Use recency and frequency as predictors for reorder models.
+- Address class imbalance for popular vs. rare products.
+
+------------------------------------------------------------
+
+M5 Walmart Dataset
+------------------
+
+1. **Sales Trends**
+   - Total weekly sales show clear seasonality and periodic spikes, especially around holidays. Time-based features (week, month, year) and holiday indicators are essential.
+   - Sales are highly variable across stores and departments, with some consistently outperforming others. Store and department IDs are strong predictors.
+
+2. **Seasonality & Holidays**
+   - Weekly sales are significantly higher during holidays, confirming the importance of holiday features.
+
+3. **Markdown & Promotion Effects**
+   - Markdowns have a weak to moderate positive correlation with sales, but the effect is not uniform across all stores/departments. Interaction terms or store-specific effects may be useful.
+
+4. **Store & Department Analysis**
+   - Store type and size bucket show clear differences in sales distributions. These categorical features should be included in models.
+
+5. **Feature Distributions**
+   - Rolling averages and days to next holiday features show meaningful variation and are likely to improve forecasting accuracy.
+
+6. **Correlation & Relationships**
+   - Numeric features show moderate correlations, especially between sales and engineered time-based features.
+
+7. **Missing Values & Anomalies**
+   - Minimal missing values; no major data quality issues detected.
+
+**Modeling Implications:**
+- Use time-based, store-based, and department-based features.
+- Include holiday and markdown features, possibly with interaction terms.
+- Consider lag features and rolling averages for time series forecasting.
+- Address store and department heterogeneity, possibly with hierarchical or multi-level models.
+
+------------------------------------------------------------
+
+**General Recommendations:**
+- Feature engineering is critical: focus on time, user/store, and product/department dimensions.
+- Address class imbalance and outliers as needed during modeling.
+- Use cross-validation that respects time series structure (e.g., time-based splits for forecasting).
+- Visualizations confirm the importance of temporal, categorical, and engineered features for both demand prediction and simulation tasks. 

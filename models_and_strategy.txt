@@ -1,0 +1,181 @@
+Models and Modeling Strategy
+===========================
+
+This document outlines the key models to be developed for the Quick Commerce MFU project, the strategy for each, the datasets to be used, and the rationale/steps for implementation. The approach is informed by EDA insights, project goals, and best practices from industry and research.
+
+------------------------------------------------------------
+
+1. Demand Forecasting Models
+----------------------------
+**Goal:** Predict order volume or sales per area, time slot, product, or store to optimize MFU pre-stocking and resource allocation.
+
+- **Datasets:**
+  - Instacart: For user/product/area-level demand patterns
+  - M5 Walmart: For time-series sales forecasting at store/department/product level
+- **Modeling Strategy:**
+  - Use time-series models (ARIMA, Prophet, Exponential Smoothing) for baseline forecasts
+  - Use machine learning models (Random Forest, XGBoost, LightGBM) for feature-rich forecasting
+  - For deep learning, consider LSTM/GRU or Temporal Fusion Transformer for complex seasonality
+  - Incorporate time-based, product-based, and user/store-based features
+  - Include holiday, promotion, and weather features where available
+  - Evaluate using RMSE/MAE and time-based cross-validation
+- **Steps:**
+  1. Aggregate demand/sales by desired granularity (area, time, product, store)
+  2. Engineer lag, rolling, and holiday features
+  3. Train/test split using time-based validation
+  4. Model selection and hyperparameter tuning
+  5. Forecast and evaluate
+
+------------------------------------------------------------
+
+2. Delivery Optimization & Simulation Models
+-------------------------------------------
+**Goal:** Optimize MFU routing, order batching, and delivery scheduling to minimize cost, time, and carbon footprint.
+
+- **Datasets:**
+  - Instacart: For order locations, timing, and clustering
+  - M5 Walmart: For demand patterns and store-level constraints
+- **Modeling Strategy:**
+  - Use clustering algorithms (K-Means, DBSCAN) to define delivery zones and MFU clusters
+  - Use optimization algorithms (Linear Programming, Genetic Algorithms, Simulated Annealing) for route and batch assignment
+  - Simulate traditional vs. MFU-based delivery using demand forecasts and real-world constraints
+  - Evaluate using delivery time, cost, and efficiency metrics
+- **Steps:**
+  1. Cluster orders by location/time for MFU assignment
+  2. Batch orders for efficient delivery
+  3. Optimize MFU routes using TSP/VRP solvers
+  4. Simulate and compare delivery models
+
+------------------------------------------------------------
+
+3. Customer Segmentation & Personalization
+------------------------------------------
+**Goal:** Identify customer segments for targeted marketing, recommendations, and personalized service.
+
+- **Datasets:**
+  - Instacart: For user purchase history, basket composition, and behavior
+- **Modeling Strategy:**
+  - Use unsupervised learning (K-Means, Hierarchical Clustering, DBSCAN) on user-product/category matrices
+  - Use PCA/t-SNE for dimensionality reduction and visualization
+  - Analyze clusters for actionable segments (e.g., loyalists, bulk buyers, new parents)
+  - Use segments for targeted recommendations and offers
+- **Steps:**
+  1. Aggregate user purchase data by product/category
+  2. Reduce dimensionality (PCA)
+  3. Cluster users and interpret segments
+  4. Integrate segments into downstream models
+
+------------------------------------------------------------
+
+4. Market Basket Analysis & Recommendation
+-----------------------------------------
+**Goal:** Discover product affinities and build recommender systems to increase basket size and customer satisfaction.
+
+- **Datasets:**
+  - Instacart: For order-product relationships
+- **Modeling Strategy:**
+  - Use association rule mining (Apriori, FP-Growth) to find frequent itemsets and rules
+  - Calculate support, confidence, and lift for product pairs
+  - Build collaborative filtering or content-based recommenders for next-product prediction
+- **Steps:**
+  1. Prepare transaction data (order-product matrix)
+  2. Run association rule mining
+  3. Build and evaluate recommender models
+
+------------------------------------------------------------
+
+5. Inventory & Restocking Optimization
+--------------------------------------
+**Goal:** Optimize MFU and store inventory levels and restocking schedules based on demand forecasts.
+
+- **Datasets:**
+  - Both Instacart and M5 Walmart (for demand and sales patterns)
+- **Modeling Strategy:**
+  - Use demand forecasts to drive inventory planning
+  - Apply inventory optimization models (EOQ, Newsvendor, simulation-based)
+  - Integrate with MFU routing and restocking simulation
+- **Steps:**
+  1. Forecast demand at MFU/store level
+  2. Calculate optimal inventory and reorder points
+  3. Simulate restocking and evaluate service levels
+
+------------------------------------------------------------
+
+6. Feedback & Service Quality Analysis
+--------------------------------------
+**Goal:** Link delivery/service metrics to customer feedback and satisfaction.
+
+- **Datasets:**
+  - Instacart (if feedback data available)
+- **Modeling Strategy:**
+  - Use regression or classification models to predict feedback scores from delivery features
+  - Analyze drivers of satisfaction and areas for improvement
+- **Steps:**
+  1. Merge feedback with delivery/order data
+  2. Feature engineering (timeliness, accuracy, etc.)
+  3. Model feedback as regression/classification
+
+------------------------------------------------------------
+
+7. Marketing Performance Attribution
+------------------------------------
+**Goal:** Quantify the impact of marketing campaigns on orders and delivery performance.
+
+- **Datasets:**
+  - Instacart (if marketing data available)
+- **Modeling Strategy:**
+  - Use uplift modeling, regression, or causal inference to estimate campaign effects
+  - Segment analysis for targeted marketing
+- **Steps:**
+  1. Merge marketing and order data
+  2. Feature engineering (campaign, timing, user segment)
+  3. Model and interpret impact
+
+------------------------------------------------------------
+
+**General Modeling Best Practices:**
+- Use time-based cross-validation for all time series and forecasting models
+- Feature engineering is critical: leverage time, user/store, product, and external data
+- Address class imbalance and outliers as needed
+- Use interpretable models for business-critical decisions, and ensemble/deep models for accuracy
+- Validate models with both offline metrics and, where possible, online/real-world experiments
+
+------------------------------------------------------------
+
+**Summary Table**
+| Model Type                      | Dataset(s)      | Key Methods/Algorithms                | Main Goal                                  |
+|----------------------------------|-----------------|---------------------------------------|---------------------------------------------|
+| Demand Forecasting               | Instacart, M5   | ARIMA, Prophet, XGBoost, LSTM         | Predict demand/sales                        |
+| Delivery Optimization/Simulation | Both            | Clustering, TSP/VRP, Simulation       | Optimize MFU routing, batching, scheduling  |
+| Customer Segmentation            | Instacart       | K-Means, Hierarchical, DBSCAN         | Identify user segments                      |
+| Market Basket Analysis           | Instacart       | Apriori, FP-Growth, Recommenders      | Product affinity, recommendations           |
+| Inventory Optimization           | Both            | EOQ, Newsvendor, Simulation           | Optimize inventory/restocking               |
+| Feedback Analysis                | Instacart       | Regression, Classification            | Link service to feedback                    |
+| Marketing Attribution            | Instacart       | Uplift, Regression, Causal Inference  | Measure marketing impact                    |
+
+------------------------------------------------------------
+
+This modeling roadmap ensures a comprehensive, data-driven approach to optimizing quick commerce operations using both Instacart and M5 Walmart datasets. 
+
+zone_mapping = {
+    0: "Upper East Side",
+    1: "Midtown",
+    2: "Brooklyn North",
+    3: "Brooklyn South",
+    4: "Queens North",
+    5: "Queens South",
+    6: "Bronx",
+    7: "Harlem & Upper Manhattan",
+    8: "Lower Manhattan & Financial District",
+    9: "Staten Island & Outer NYC"
+}
+
+**Usage Example:**
+Whenever you want to display or interpret results by zone, use:
+```python
+zone_name = zone_mapping[cluster_number]
+```
+
+---
+
+If you’d like, I can also generate a markdown or text file with this mapping for your documentation. Let me know if you want that, or if you need the mapping in a different format! 
