@@ -1,0 +1,47 @@
+Outlier Detection Report
+========================
+
+This report summarizes the outlier detection process for both the Instacart and M5 Walmart datasets, including the method used, columns analyzed, number and percentage of outliers, and calculation details.
+
+------------------------------------------------------------
+
+Instacart Dataset
+-----------------
+- **Column analyzed:** add_to_cart_order (the position of a product in the cart for each order)
+- **Outlier detection method:** IQR (Interquartile Range) Rule
+    - Outliers are defined as values less than Q1 - 1.5×IQR or greater than Q3 + 1.5×IQR
+    - Q1 (25th percentile) and Q3 (75th percentile) are calculated from the data
+    - IQR = Q3 - Q1
+    - Lower bound = Q1 - 1.5×IQR
+    - Upper bound = Q3 + 1.5×IQR
+- **Number of outliers detected:** ~1,357,124
+- **Total records analyzed:** 32,434,489
+- **Percentage of outliers:** ~4.18%
+- **Interpretation:**
+    - Outliers represent unusually high or low positions in the cart sequence. High values may indicate bulk orders or rare user behavior, while low values (below 1) are likely errors.
+    - Outliers were not removed at this stage; they may be revisited if they impact modeling.
+
+------------------------------------------------------------
+
+M5 Walmart Dataset
+------------------
+- **Column analyzed:** Weekly_Sales (weekly sales for each store and department)
+- **Outlier detection method:** IQR (Interquartile Range) Rule
+    - Outliers are defined as values less than Q1 - 1.5×IQR or greater than Q3 + 1.5×IQR
+    - Q1 (25th percentile) and Q3 (75th percentile) are calculated from the data
+    - IQR = Q3 - Q1
+    - Lower bound = Q1 - 1.5×IQR ≈ -25,109.65
+    - Upper bound = Q3 + 1.5×IQR ≈ 47,395.16
+- **Number of outliers detected:** 35,521
+- **Total records analyzed:** 421,570
+- **Percentage of outliers:** 8.43%
+- **Interpretation:**
+    - Outliers include very high or low weekly sales, which may be due to real business events (e.g., holidays, promotions) or data corrections (e.g., negative sales).
+    - Outliers were not removed at this stage; they may be revisited if they impact modeling.
+
+------------------------------------------------------------
+
+**Note:**
+- Outlier detection was performed using the IQR rule, a standard statistical method for identifying extreme values in a distribution.
+- Visualizations (boxplots and histograms) were also generated for both columns to aid in understanding the distribution and presence of outliers.
+- Outliers are retained for now and will be reconsidered if they negatively affect model performance or analysis. 
