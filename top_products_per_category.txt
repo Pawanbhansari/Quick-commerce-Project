@@ -1,0 +1,99 @@
+
+Category: Bakery & Breads
+  English Muffins (Product ID: 116) - Predicted sales: 25.25
+  Healthfull Nuts & Seeds Bread (Product ID: 189) - Predicted sales: 25.25
+  Poppy Seed Bagels (Product ID: 245) - Predicted sales: 25.25
+  French Rolls (Product ID: 517) - Predicted sales: 25.25
+  Flax, Oat Bran & Whole Wheat Flour Tortillas (Product ID: 653) - Predicted sales: 25.25
+  Whole Wheat Loaves (Product ID: 666) - Predicted sales: 25.25
+  Fajita Flour Tortillas (Product ID: 705) - Predicted sales: 25.25
+  100% Whole Wheat Flour Burrito Tortillas (Product ID: 737) - Predicted sales: 25.25
+
+
+Category: Beverages
+  Robust Golden Unsweetened Oolong Tea (Product ID: 3) - Predicted sales: 20.31
+  Sparkling Orange Juice & Prickly Pear Beverage (Product ID: 10) - Predicted sales: 20.31
+  Jasmine Tea Unfiltered Ginger Ale (Product ID: 73) - Predicted sales: 20.31
+  Classics Earl Grey Tea (Product ID: 87) - Predicted sales: 20.31
+  Brut Rosé (Product ID: 150) - Predicted sales: 20.31
+  Soda (Product ID: 196) - Predicted sales: 20.31
+  Kiwi Strawberry Sparkling Water (Product ID: 223) - Predicted sales: 20.31
+  Tennessee Whiskey (Product ID: 234) - Predicted sales: 20.31
+
+
+Category: Dairy & Chilled
+  Vegetarian Grain Meat Sausages Italian - 4 CT (Product ID: 49) - Predicted sales: 32.06
+  Artisan Chick'n & Apple Sausage (Product ID: 74) - Predicted sales: 32.06
+  Peanut Butter & Strawberry Jam Sandwich (Product ID: 100) - Predicted sales: 32.06
+  Petit Suisse Fruit (Product ID: 117) - Predicted sales: 32.06
+  Ground Turkey Chub (Product ID: 118) - Predicted sales: 32.06
+  Sharp Cheddar (Product ID: 121) - Predicted sales: 32.06
+  Marscapone (Product ID: 127) - Predicted sales: 32.06
+  Organic Wild Blueberries (Product ID: 128) - Predicted sales: 32.06
+
+
+Category: Essentials & Groceries
+  Organic Turkey Burgers (Product ID: 23) - Predicted sales: 15.30
+  Wheat Chex Cereal (Product ID: 28) - Predicted sales: 15.30
+  Organic Spaghetti Style Pasta (Product ID: 33) - Predicted sales: 15.30
+  Peanut Butter Cereal (Product ID: 34) - Predicted sales: 15.30
+  Noodle Soup Mix With Chicken Broth (Product ID: 37) - Predicted sales: 15.30
+  Onion Flavor Organic Roasted Seaweed Snack (Product ID: 47) - Predicted sales: 15.30
+  Jelly, Blackberry (Product ID: 67) - Predicted sales: 15.30
+  Wild Albacore Tuna No Salt Added (Product ID: 79) - Predicted sales: 15.30
+
+
+Category: Fresh Produce
+  European Cucumber (Product ID: 45) - Predicted sales: 166.72
+  Local Living Butter Lettuce (Product ID: 99) - Predicted sales: 166.72
+  Nectarines (Product ID: 148) - Predicted sales: 166.72
+  Herb Thyme Clamshell (Product ID: 199) - Predicted sales: 166.72
+  Cantaloupe (Product ID: 260) - Predicted sales: 166.72
+  Organic Whole Peeled Baby Carrots (Product ID: 343) - Predicted sales: 166.72
+  Vegetable Salad Kit, Sweet Kale (Product ID: 347) - Predicted sales: 166.72
+  Mache Blend (Product ID: 389) - Predicted sales: 166.72
+
+
+Category: Household & Cleaning
+  School Glue, Washable, No Run (Product ID: 48) - Predicted sales: 9.58
+  Ultra 7 Inch Polypropylene Traditional Plates (Product ID: 71) - Predicted sales: 9.58
+  Fabric Softener, Geranium Scent (Product ID: 111) - Predicted sales: 9.58
+  Free & Clear Natural Laundry Detergent For Sensitive Skin (Product ID: 204) - Predicted sales: 9.58
+  Triple-Acting Laundry Stain Remover (Product ID: 246) - Predicted sales: 9.58
+  OneZip Storage Bags Quart Size Value Pack (Product ID: 270) - Predicted sales: 9.58
+  Snack Bags (Product ID: 274) - Predicted sales: 9.58
+  Twist n Loc Small Round Containers + Lids (Product ID: 354) - Predicted sales: 9.58
+
+
+Category: Miscellaneous/Other
+  24/7 Performance Cat Litter (Product ID: 54) - Predicted sales: 7.07
+  Banana & Sweet Potato Organic Teething Wafers (Product ID: 63) - Predicted sales: 7.07
+  Camilia, Single Liquid Doses (Product ID: 86) - Predicted sales: 7.07
+  Organic Blueberry Blitz Fruit & Veggie Smoothie Mashups (Product ID: 94) - Predicted sales: 7.07
+  Organic Yummy Tummy Maple & Brown Sugar Instant Oatmeal (Product ID: 106) - Predicted sales: 7.07
+  Totz Toothbrush Extra Soft 18+ Months (Product ID: 219) - Predicted sales: 7.07
+  Prime Filets Chicken & Tuna Dinner in Gravy Cat Food (Product ID: 293) - Predicted sales: 7.07
+  Chunky Beef with Vegetables & Brown Rice Dog Food (Product ID: 377) - Predicted sales: 7.07
+
+
+Category: Personal Care & Hygiene
+  Complete Spring Water Foaming Antibacterial Hand Wash (Product ID: 27) - Predicted sales: 3.32
+  EcoNet Recycled Bath Sponge (Product ID: 229) - Predicted sales: 3.32
+  Makeup Remover Cleansing Towelettes (Product ID: 280) - Predicted sales: 3.32
+  Chewables Extra Strength Cherry Creme - 48 CT (Product ID: 295) - Predicted sales: 3.32
+  Go Fresh Nutrium Moisture Body Wash Blue Fig & Orange Blossom Scent (Product ID: 351) - Predicted sales: 3.32
+  Moisture Rich Sweet Orange & Argan Conditioner (Product ID: 372) - Predicted sales: 3.32
+  Flat Floss, Antiplaque, Naturally Waxed, Spearmint (Product ID: 401) - Predicted sales: 3.32
+  Ibuprofen Liquid Gels (Product ID: 455) - Predicted sales: 3.32
+
+
+Category: Snacks & Convenience
+  Chocolate Sandwich Cookies (Product ID: 1) - Predicted sales: 17.07
+  Salted Caramel Lean Protein & Fiber Bar (Product ID: 25) - Predicted sales: 17.07
+  Nacho Cheese White Bean Chips (Product ID: 32) - Predicted sales: 17.07
+  Organic Sourdough Einkorn Crackers Rosemary (Product ID: 41) - Predicted sales: 17.07
+  Coconut Chocolate Chip Energy Bar (Product ID: 77) - Predicted sales: 17.07
+  Uncured Cracked Pepper Beef (Product ID: 93) - Predicted sales: 17.07
+  Restaurant Style Organic Chia & Quinoa Tortilla Chips (Product ID: 141) - Predicted sales: 17.07
+  Traditional Water Crackers (Product ID: 145) - Predicted sales: 17.07
+
